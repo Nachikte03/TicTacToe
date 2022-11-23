@@ -1,0 +1,123 @@
+*{
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    color: #911d91;
+}
+
+.gameContainer{ 
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(165, 219, 188);
+}
+
+.info {
+    font-size: 22px;
+}
+
+.turnInfo{
+    margin: 20px;
+    text-align: center;
+}
+
+
+
+#reset {
+    text-align: center;
+    align-items: center;
+    margin: 0 23px;
+    padding: 8px 25px;
+    background: #7ecda4;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+#reset:hover {
+    background: #2cc55c;
+
+}
+
+.popup{
+    width : 400px;
+    background: rgb(168, 238, 167);
+    border-radius: 10px;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    text-align: center;
+    padding: 30px;
+    color: #333;
+    align-items: center;
+    box-sizing: border-box;
+    visibility: visible;
+
+}
+
+.popup h2{
+    margin: 30px;
+    background: rgb(168, 238, 167);
+}
+
+.popup button{
+    text-align: center;
+    align-items: center;
+    margin: 0 23px;
+    padding: 8px 25px;
+    background: #7ecda4;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+open-popup{
+    visibility: visible;
+}
+
+
+
+@media screen and (max-width: 950px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
